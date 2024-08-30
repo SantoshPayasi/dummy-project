@@ -8,7 +8,7 @@ function App() {
     (()=>{
     axios.get("https://dummy-project-three.vercel.app/getData", {
         headers:{
-            "Access-Control-Allow-Origin":"https://dummy-project-frontend.vercel.app"
+            "Access-Control-Allow-Origin":"*"
           }
       }).then(async data=>{
          console.log(data)
