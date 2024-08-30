@@ -7,7 +7,7 @@ app.use(express.json())
 
 
 app.use(cors({
-    origin:"*",
+    origin:"https://dummy-project-frontend.vercel.app",
     credentials:true
 }))
 app.get('/', (req, res) => {
