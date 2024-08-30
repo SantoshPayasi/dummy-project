@@ -7,9 +7,9 @@ function App() {
   React.useEffect(() => {
     (()=>{
     axios.get("https://dummy-project-three.vercel.app/getData", {
-        headers:{
-            "Access-Control-Allow-Origin":"*"
-          }
+        // headers:{
+        //     "Access-Control-Allow-Origin":"*"
+        //   }
       }).then(async data=>{
          console.log(data)
         // setMessage(fetchedData.data.name)
