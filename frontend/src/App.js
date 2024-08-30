@@ -5,7 +5,7 @@ function App() {
   const [message, setMessage] = React.useState("message")
   React.useEffect(() => {
     (()=>{
-    fetch("http://localhost:3001/getData", {
+    fetch("https://dummy-project-three.vercel.app/getData", {
         method:"GET"
       }).then(async data=>{
         const fetchedData = await data.json()
