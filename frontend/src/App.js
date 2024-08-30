@@ -1,15 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
+import axios from "axios"
 function App() {
   const [message, setMessage] = React.useState("message")
   React.useEffect(() => {
     (()=>{
-    fetch("https://dummy-project-three.vercel.app/getData", {
-        method:"GET"
+    axios.get("https://dummy-project-three.vercel.app/getData", {
+        headers:{
+            "Access-Control-Allow-Origin":"https://dummy-project-frontend.vercel.app"
+          }
       }).then(async data=>{
-        const fetchedData = await data.json()
-        setMessage(fetchedData.data.name)
+         console.log(data)
+        // setMessage(fetchedData.data.name)
       })
    
     })()
